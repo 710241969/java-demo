@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>mybatis-demo</artifactId>
+        <groupId>com.wang.java</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>mybatis-base</artifactId>
+
+    <dependencies>
+
+        <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>3.5.1</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.16</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.4.2</version>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <resources>
+            <!--IDEA的锅：IDEA的Maven是不会编译src的java目录的xml文件，所以在Mybatis的配置文件中找不到xml文件！
+
+其实也可以说是IDEA MAVEN的锅-->
+            <resource>
+                <!-- java文件夹 -->
+                <directory>src/main/java</directory>
+                <!-- 引入映射文件等 -->
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+
+            <!-- resources文件 -->
+            <!--<resource>-->
+            <!--<directory>src/main/resources</directory>-->
+            <!--&lt;!&ndash; 是否被过滤,如果被过滤则无法使用 &ndash;&gt;-->
+            <!--<filtering>false</filtering>-->
+            <!--</resource>-->
+        </resources>
+
+
+    </build>
+</project>
