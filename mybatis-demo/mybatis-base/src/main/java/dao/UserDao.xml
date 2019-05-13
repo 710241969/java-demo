@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 
+<!--使用映射器接口实现类的完全限定类名 或者 通过 package 进行映射器扫描-->
+<!--注意：此种方法要求 mapper 接口名称和 mapper 映射文件名称相同，且必须和接口在一个包下-->
+<!--只能使用完全限定名，只能通过完全限定名的接口操作-->
 <mapper namespace="dao.UserDao">
 
     <select id="selectAllUser" resultType="pojo.User">

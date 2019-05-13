@@ -52,11 +52,11 @@
             </resource>
 
             <!-- resources文件 -->
-            <!--<resource>-->
-            <!--<directory>src/main/resources</directory>-->
-            <!--&lt;!&ndash; 是否被过滤,如果被过滤则无法使用 &ndash;&gt;-->
-            <!--<filtering>false</filtering>-->
-            <!--</resource>-->
+            <resource>
+                <directory>src/main/resources</directory>
+                <!-- 是否被过滤,如果被过滤则无法使用 -->
+                <filtering>false</filtering>
+            </resource>
         </resources>
 
 

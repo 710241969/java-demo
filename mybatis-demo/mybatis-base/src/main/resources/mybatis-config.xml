@@ -39,8 +39,22 @@
     <!--<databaseIdProvider type=""/>-->
     <!--映射器-->
     <mappers>
-<!--        <mapper resource="mapper/UserMapper.xml"></mapper>-->
-<!--        <mapper resource="mapper/UserDao.xml"></mapper>-->
-        <package name="dao"></package>
+        <!-- 使用相对于类路径的资源引用 -->
+        <mapper resource="mapper/UserMapper.xml"></mapper> <!--通过短名称命名空间操作-->
+        <mapper resource="mapper/UserDao.xml"></mapper> <!--通过完全限定名的接口操作-->
+
+        <!-- 使用完全限定资源定位符（URL） -->
+        <!--                <mapper url="file:///D:/WangYiming/github/java-demo/mybatis-demo/mybatis-base/src/main/java/mapper/UserMapper.xml"></mapper>-->
+        <!--        <mapper url="file:///D:/WangYiming/github/java-demo/mybatis-demo/mybatis-base/src/main/java/mapper/UserDao.xml"></mapper>-->
+
+        <!-- 使用映射器接口实现类的完全限定类名 -->
+        <!--注意：此种方法要求 mapper 接口名称和 mapper 映射文件名称相同，且必须和接口在一个包下-->
+        <!--只能通过短名称命名空间操作-->
+        <!--        <mapper class="dao.UserDao"></mapper>-->
+
+        <!-- 将包内的映射器接口实现全部注册为映射器 -->
+        <!--注意：此种方法要求 mapper 接口名称和 mapper 映射文件名称相同，且必须和接口在一个包下-->
+        <!--只能通过完全限定名的接口操作-->
+        <!--                <package name="dao"></package>-->
     </mappers>
 </configuration>
