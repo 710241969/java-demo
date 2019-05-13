@@ -21,10 +21,13 @@ public class TestUser {
      */
     @Test
     public void Test() throws IOException {
-        SqlSession session = SqlSessionUtil.getSqlSession();
-        List<User> userList = session.selectList("UserMapper.selectAllUser");
-        System.out.println(userList);
-
+        SqlSession sqlSession = SqlSessionUtil.getSqlSession();
+        try {
+            List<User> userList = sqlSession.selectList("UserMapper.selectAllUser");
+            System.out.println(userList);
+        } finally {
+            sqlSession.close();
+        }
     }
 
     /**
@@ -36,9 +39,13 @@ public class TestUser {
      */
     @Test
     public void Test2() throws IOException {
-        SqlSession session = SqlSessionUtil.getSqlSession();
-        UserDao userDao = session.getMapper(UserDao.class);
-        List<User> userList = userDao.selectAllUser();
-        System.out.println(userList);
+        SqlSession sqlSession = SqlSessionUtil.getSqlSession();
+        try {
+            UserDao userDao = sqlSession.getMapper(UserDao.class);
+            List<User> userList = userDao.selectAllUser();
+            System.out.println(userList);
+        } finally {
+            sqlSession.close();
+        }
     }
 }
