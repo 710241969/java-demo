@@ -1,0 +1,7 @@
+# 使用下面的方式则不用 mybatis-config.xml 的配置方式了
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  # 如果 mapper*.xml 在 java 目录下，则需要 pom.xml 中设置 java 目录下的 xml 文件也打包
+  # mapper-locations: classpath:demo/mapper/*.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml

@@ -40,7 +40,6 @@
     <build>
         <resources>
             <!--IDEA的锅：IDEA的Maven是不会编译src的java目录的xml文件，所以在Mybatis的配置文件中找不到xml文件！
-
 其实也可以说是IDEA MAVEN的锅-->
             <resource>
                 <!-- java文件夹 -->
