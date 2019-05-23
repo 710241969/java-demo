@@ -2,6 +2,7 @@ package demo.cglibproxy;
 
 /**
  * 真实对象
+ * 可以不实现接口
  *
  * @author wangyiming
  */
