@@ -1,7 +1,7 @@
 package demo.staticfacrotymethod;
 
 import demo.InterfaceProduct;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class StaticFactoryMethodTest {
     @Test

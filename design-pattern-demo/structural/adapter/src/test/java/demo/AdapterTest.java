@@ -1,9 +1,11 @@
 package demo;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
 
 public class AdapterTest {
     @Test
+
     public void classAdapterTest() {
         InterfaceTarget target = new ClassAdapter();
         target.request();

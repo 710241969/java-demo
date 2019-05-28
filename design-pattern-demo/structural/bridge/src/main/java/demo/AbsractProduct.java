@@ -7,5 +7,5 @@ public abstract class AbsractProduct {
         this.color = color;
     }
 
-    public abstract void operation();
+    abstract public void operation();
 }

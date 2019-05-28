@@ -1,6 +1,7 @@
 package demo.jdkproxy;
 
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
 
 public class JdkProxyTest {
     @Test

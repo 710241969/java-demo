@@ -13,6 +13,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>chain-of-responsibility</module>
+        <module>observer</module>
+        <module>template-method</module>
     </modules>
 
 
