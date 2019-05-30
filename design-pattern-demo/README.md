@@ -1,4 +1,4 @@
-创建型模式
+# 创建型模式
 Factory Method 工厂方法模式
 Abstract Factory 抽象工厂模式
 Builder 建造者模式

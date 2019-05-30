@@ -17,6 +17,7 @@
         <module>bridge</module>
         <module>facade</module>
         <module>composite</module>
+        <module>decorator</module>
     </modules>
 
 
