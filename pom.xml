@@ -13,6 +13,8 @@
         <module>mybatis-demo</module>
         <module>spring-boot-demo</module>
         <module>design-pattern-demo</module>
+        <module>spring-demo</module>
+        <module>spring-mvc-demo</module>
     </modules>
 
     <build>
