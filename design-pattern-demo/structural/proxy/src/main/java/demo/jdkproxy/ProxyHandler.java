@@ -5,17 +5,10 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 public class ProxyHandler implements InvocationHandler {
-    private Object targetObject;
+    private InterfaceObject targetObject;
 
-    public ProxyHandler(InterfaceObject targetObject) {
+    private ProxyHandler(InterfaceObject targetObject) {
         this.targetObject = targetObject;
-    }
-
-    public Object getProxyInstance() {
-        return Proxy.newProxyInstance(
-                targetObject.getClass().getClassLoader(),
-                targetObject.getClass().getInterfaces(),
-                this);
     }
 
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
@@ -23,5 +16,13 @@ public class ProxyHandler implements InvocationHandler {
         Object methodResult = method.invoke(targetObject, args);
         System.out.println("代理对象执行 after " + method.getName());
         return methodResult;
+    }
+
+    public static Object getProxyInstance(InterfaceObject targetObject) {
+        ProxyHandler proxyHandler = new ProxyHandler(targetObject);
+        return Proxy.newProxyInstance(
+                targetObject.getClass().getClassLoader(),
+                targetObject.getClass().getInterfaces(),
+                proxyHandler);
     }
 }

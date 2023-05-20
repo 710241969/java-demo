@@ -7,7 +7,16 @@ public class CglibProxyTest {
     @Test
     public void test() {
         TargetObject targetObject = new TargetObject();
-        TargetObject proxyObject = (TargetObject) new ProxyHandler(targetObject).getProxyInstance();
-        proxyObject.doSomething();
+        TargetObject proxyObject = (TargetObject) ProxyFactory.getProxyInstance(targetObject);
+        proxyObject.doSomething1();
+        proxyObject.doSomething2();
+    }
+
+    @Test
+    public void test2() {
+        TargetObject targetObject = new TargetObject();
+        TargetObject proxyObject = (TargetObject) ProxyHandler.getProxyInstance(targetObject);
+        proxyObject.doSomething1();
+        proxyObject.doSomething2();
     }
 }

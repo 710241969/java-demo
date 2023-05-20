@@ -7,14 +7,16 @@ public class JdkProxyTest {
     @Test
     public void test() {
         InterfaceObject realObject = new TargetObject();
-        InterfaceObject proxyObject = (InterfaceObject) new ProxyFactory(realObject).getProxyInstance();
-        proxyObject.doSomething();
+        InterfaceObject proxyObject = (InterfaceObject) ProxyFactory.getProxyInstance(realObject);
+        proxyObject.doSomething1();
+        proxyObject.doSomething2();
     }
 
     @Test
     public void test2() {
         InterfaceObject realObject = new TargetObject();
-        InterfaceObject proxyObject = (InterfaceObject) new ProxyFactory(realObject).getProxyInstance();
-        proxyObject.doSomething();
+        InterfaceObject proxyObject = (InterfaceObject) ProxyHandler.getProxyInstance(realObject);
+        proxyObject.doSomething1();
+        proxyObject.doSomething2();
     }
 }

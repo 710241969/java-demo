@@ -7,7 +7,7 @@ package demo.jdkproxy;
  * @author wangyiming
  */
 public interface InterfaceObject {
+    void doSomething1();
 
-    void doSomething();
-
+    void doSomething2();
 }
